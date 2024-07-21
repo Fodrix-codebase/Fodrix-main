@@ -1,0 +1,26 @@
+.alertContainer {
+  width: 99%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 505;
+  transition: 2s ease-in;
+}
+
+.alertContainer__inner {
+  width: 50%;
+  height: auto;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  position: fixed;
+  top: 6em;
+  overflow: hidden;
+}
+
+.alertContainer .alertContainer__inner p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,70 @@
+.booknow_component_css {
+  box-shadow: 6px 10px 10px 5px #888888;
+}
+.img_booknow {
+  background: url("../../All_Images/bookashot.png") center no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.bookNowcomponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  min-width: 60vh;
+}
+
+.bookNowcomponent h4 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.bookNowcomponent .form-input {
+  position: relative;
+}
+
+.bookNowcomponent .form-input input {
+  width: 40vh;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: white;
+  padding-left: 45px;
+}
+
+.bookNowcomponent .form-input span {
+  position: absolute;
+  top: 8px;
+  padding-left: 20px;
+  color: #777;
+}
+
+.bookNowcomponent .form-input input::placeholder {
+  padding-left: 0px;
+}
+
+.bookNowcomponent .form-input input:focus,
+.bookNowcomponent .form-input input:valid {
+  border-bottom: 2px solid #48403d;
+}
+
+.next {
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  margin-left: 65px;
+  background-color: #87ceeb;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+}

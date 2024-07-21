@@ -1,0 +1,42 @@
+/* @import url("http://fonts.googleapis.com/css?fam"); */
+.image-section {
+  margin: 0px;
+  width: 150px;
+}
+
+.image-section img {
+  width: 100px;
+  height: auto;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.title {
+  font-size: 25px;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.cancPolicyContent h3 {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  /* padding: 0px 50px 0px; */
+}
+
+.cancPolicyContent p {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.content-section .social {
+  margin: 40px 40px;
+}
+
+.content-section .social i {
+  color: #1e90ff;
+  font-size: 30px;
+  padding: 0px 10px;
+}

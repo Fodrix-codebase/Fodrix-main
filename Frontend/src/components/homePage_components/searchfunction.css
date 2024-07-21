@@ -1,0 +1,54 @@
+.header_home .description_home .form_home input::-webkit-input-placeholder {
+  font-family: "Poppins";
+}
+
+.header_home .description_home .form_home input:-ms-input-placeholder {
+  font-family: "Poppins";
+}
+
+.header_home .description_home .form_home input::-ms-input-placeholder {
+  font-family: "Poppins";
+}
+
+.header_home .description_home .form_home input::placeholder {
+  font-family: "Poppins";
+}
+
+.header_home .description_home .form_home {
+  position: relative;
+}
+
+.header_home .description_home .form_home i {
+  position: absolute;
+  left: 0.7em;
+  top: 50%;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  font-size: 20px;
+  color: #aaaaaa;
+}
+
+.header_home .description_home .form_home input {
+  padding: 0.7em 3em 0.7em;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+}
+
+.form_home .ul_search {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.form_home .ul_search ::before {
+  content: "";
+}
+.li_search {
+  color: black;
+  /* padding: 10px 5px; */
+  cursor: pointer;
+}
+.li_search:hover {
+  background-color: #e7feff;
+}

@@ -1,0 +1,14 @@
+
+#navright{
+    display:inline-block;
+    position: fixed;
+    top: 80vh;
+    right: 10px;
+    z-index: 1000000000;
+    cursor: pointer;
+}
+
+.wtsp-icon{
+    color: #00e300;
+    font-size: 2.5rem;
+}

@@ -1,0 +1,121 @@
+.NewDashboard-Body__container {
+  width: 85%;
+  min-height: 100vh;
+  max-height: fit-content;
+  /* height: 100vh; */
+  padding: 1em;
+  background-color: #eff3fa;
+}
+
+.NewDashboard-header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.NewDashboard-header .menu-btn{
+  display: none;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.NewDashboard-header .dashboard-heading{
+  font-size: 2rem;
+  margin: 0;
+}
+
+.NewDashboard-header button {
+  width: 12em;
+  height: 3em;
+  border-radius: 5em;
+  border: none;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  transition: 0.1s ease-in;
+}
+
+.NewDashboard-header a {
+  position: absolute;
+  right: 1rem;
+}
+
+.NewDashboard-header .bookAShoot_btn-link {
+  display: none;
+}
+
+.NewDashboard-header .bookAShoot_btn {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.NewDashboard-header button:hover {
+  background-color: #0069d9;
+}
+
+.NewDashboard-booking__route {
+  height: 5vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.NewDashboard-booking__link {
+  height: 100%;
+  margin-right: 1em;
+  text-decoration: none;
+  color: black;
+  margin-bottom: -2px;
+}
+
+/*temperarily on hover to be changed to focus*/
+.NewDashboard-booking__link:hover {
+  box-sizing: border-box;
+  border-bottom: 5px solid #007bff;
+  border-radius: 5px;
+}
+
+.NewDashboard-photoshootCard {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+
+@media (max-width: 810px) {
+  .NewDashboard-Body__container {
+    width: 100%;
+  }
+
+  .NewDashboard-photoshootCard {
+    justify-content: center;
+  }
+
+  .NewDashboard-header .menu-btn{
+    display: block;
+  }
+}
+
+@media (max-width: 645px) {
+  .NewDashboard-Body__container {
+    height: max-content;
+  }
+
+  .NewDashboard-header button {
+    /* width: 10em;
+    height: 2.5em; */
+    /* display: none; */
+    width: auto;
+    height: auto;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .NewDashboard-header .bookAShoot_btn-link{
+    display: block;
+  }
+}

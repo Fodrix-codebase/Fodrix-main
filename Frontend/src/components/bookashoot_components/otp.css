@@ -1,0 +1,169 @@
+.card_otpcomponents {
+  width: 650px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 390px;
+  position: relative;
+}
+.card_forgetotpcomponents {
+  width: 750px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 790px;
+  position: relative;
+}
+.heading_otpcomponent {
+  color: #0fc0fc;
+}
+.input_formcontrol_forget {
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+}
+/* .otp_component {
+  height: 100vh;
+  background: #eee;
+} */
+.otp_component {
+  margin-top: 80px;
+}
+.forgetotpcomponents {
+  background: #eee;
+}
+.not-receive_otpcomponents {
+  color: #989696b8;
+  font-size: 15px;
+  margin: 50px;
+  text-align: center;
+}
+
+.form_otpcomponent {
+  margin-right: 12px;
+}
+
+.form_otpcomponent:focus {
+  color: #0fc0fc;
+  background-color: #fff;
+  border-color: #0fc0fc;
+  outline: 0;
+  box-shadow: none;
+}
+.form_otpcomponentforget {
+  margin-right: 12px;
+}
+
+.form_otpcomponentforget:focus {
+  color: #0fc0fc;
+  background-color: #fff;
+  border-color: #0fc0fc;
+  outline: 0;
+  box-shadow: none;
+}
+.forget_form_container {
+  text-align: center;
+  box-shadow: 5px 5px 5px 5px #888888;
+  width: 50%;
+  transform: translate(50%, 50%);
+}
+.verify_otpcomponents {
+  background-color: #0fc0fc;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+.cursor {
+  cursor: pointer;
+  color: #0fc0fc;
+}
+
+.otpforget_container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.otpforget_container input[type="text"],
+.otpforget_container input[type="email"],
+.otpforget_container input[type="phone"],
+.otpforget_container input[type="number"],
+.otpforget_container textarea {
+  width: 90%;
+
+  border: 1px solid black;
+  box-shadow: 0 0 1px 1px white;
+}
+
+.otpforget_container .panel {
+  border: 2px solid black;
+  height: 90%;
+  margin: 20px;
+  padding: 20px;
+  width: 190%;
+}
+.otpforget_container .panel .panel-heading {
+  margin-bottom: 20px;
+}
+.otpforget_container .btn-group {
+  width: 90%;
+  margin: 10px auto 10px auto;
+}
+.otpforget_container .back {
+  float: left;
+}
+
+/* Multi-Part CSS */
+input[type="checkbox"] {
+  position: absolute;
+  /* Position the checkbox in upper left corner */
+  opacity: 0;
+}
+
+/* Styling Parts */
+#part1,
+#part2,
+#part3 {
+  z-index: 2;
+  display: block;
+  height: 80%;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Hidden Parts */
+#part2,
+#part3 {
+  opacity: 0;
+  height: 0;
+}
+
+/* Show Step 2 & Hide Step 1 */
+#step2:checked ~ #part2 {
+  opacity: 1;
+  height: auto;
+}
+
+#step2:checked ~ #part1 {
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+/* Show Step 3  & Hide Step 2 */
+#step3:checked ~ #part3 {
+  opacity: 1;
+  height: auto;
+}
+
+#step3:checked ~ #part2 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

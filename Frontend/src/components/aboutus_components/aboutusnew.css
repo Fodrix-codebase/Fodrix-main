@@ -1,0 +1,428 @@
+.img_mainteam {
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  margin-left: 37%;
+}
+.name {
+  display: inline-flex;
+  margin-left: 20px;
+  font-size: 24px;
+  text-decoration: none;
+}
+.team {
+  width: 50%;
+  display: inline;
+  padding: 20px;
+  padding-top: 40px;
+}
+.img_team {
+  border-radius: 50%;
+  width: 78%;
+  margin-left: 15%;
+
+  height: 8em;
+  width: 8em;
+}
+.img_team_dev {
+  border-radius: 50%;
+  width: 78%;
+  margin-left: 633px;
+  height: 8em;
+  width: 8em;
+  margin-top: 10px;
+}
+.work_main-dev {
+  margin-left: 783px;
+  margin-top: -51px;
+}
+.main_team {
+  margin-left: 58px;
+}
+
+.work_main {
+  display: block;
+  margin-left: 560px;
+  margin-top: -46px;
+  font-size: 18px;
+}
+
+.work-left {
+  margin-left: 342px;
+  margin-top: -47px;
+}
+
+.work-right {
+  margin-left: 245px;
+  margin-top: -42px;
+}
+
+.work {
+  margin-left: 247px;
+  margin-top: -48px;
+  font-size: 18px;
+}
+.linkedin_main {
+  display: block;
+  margin-left: 618px;
+  margin-top: 3px;
+}
+.linkedin {
+  margin-left: 252px;
+  margin-top: -5px;
+}
+.our_team {
+  width: 99%;
+  margin: -41px auto;
+  margin-inline: -22px;
+}
+/* img.aboutus_graphics {
+  margin-top: -280px;
+} */
+.aboutus_heading {
+  margin: 2rem 0 0 5px;
+  padding: 10px;
+}
+
+.aboutus_heading > h1{
+  font-weight: 600;
+}
+
+.aboutus_para {
+  margin: 4px;
+  padding: 10px;
+  line-height: 1.2;
+}
+
+/* .aboutus_component .about_img1 {
+  width: 85vw;
+}
+.aboutus_component .about_img2 {
+  width: 90vw;
+} */
+
+/* ************************************************ New codde tetsing.... ************************************** */
+/* 
+.aboutus_component_para{
+  margin: 3rem !important;
+}
+
+.what_is_fodrix{
+  display: flex;
+  gap: 2%;
+}
+
+.what_is_fodrix-wrapper{
+  width: 60%;
+}
+
+.Why_choose_Fodrix{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2%;
+}
+
+.Why_choose_Fodrix-wrapper{
+  width: 60%;
+}
+
+.How_Fodrix_started{
+  display: flex;
+  gap: 2%;
+}
+
+.How_Fodrix_started-wrapper{
+  width: 60%;
+}
+
+.Why_choose_Fodrix-wrapper p, .what_is_fodrix p, .How_Fodrix_started p{
+  text-align: justify;
+}
+
+.img1, .img2, .img3{
+  height: 23rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+} */
+
+.aboutus_component_para{
+  margin-top: 3rem !important;
+}
+
+.aboutus_container{
+  display: flex;
+  gap: 2%;
+}
+
+.aboutus_container-wrapper{
+  width: 60%;
+}
+
+.aboutus_container:nth-child(2){
+  flex-direction: row-reverse;
+}
+
+.aboutus_container-wrapper p{
+  text-align: justify;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 524px) and (min-width: 320px){
+  .aboutus_container-wrapper p{
+    text-align: justify;
+    font-size: 15px;
+  }
+}
+
+
+.aboutus-img{
+  height: 23rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+
+.aboutus-img > img{
+  width: 100%;
+}
+
+/* ************************************************************************************************************* */
+/* ============ new css ============== */
+
+.services {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(6, 6rem);
+  grid-row-gap: 4rem;
+}
+
+.service {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.service:nth-child(1) {
+  grid-column: 4 / 7;
+  grid-row: 1 / 3;
+}
+
+.service:nth-child(2) {
+  grid-column: 3 / 6;
+  grid-row: 3 / 5;
+}
+
+.service:nth-child(3) {
+  grid-column: 4 / 7;
+  grid-row: 5 / -1;
+}
+
+.service:nth-child(4) {
+  grid-column: 11 / 14;
+  grid-row: 1 / 3;
+}
+
+.service:nth-child(5) {
+  grid-column: 12 / 15;
+  grid-row: 3 / 5;
+}
+
+.service:nth-child(6) {
+  grid-column: 11 / 14;
+  grid-row: 5 / -1;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.service-header i {
+  font-size: 3.2rem;
+  color: #4b4b4b;
+  margin-right: 1.3rem;
+}
+
+.service-header h3 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.6rem;
+  text-align: justify;
+  font-weight: 600;
+}
+
+/* ======= */
+/* ================ new team code ================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
+}
+
+.wrapper {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.wrapper h1 {
+  font-size: 48px;
+  color: black;
+  margin-bottom: 25px;
+}
+
+.our_team {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our_team .team_member {
+  /* width: 250px; */
+  margin: 5px;
+  background: transparent;
+  padding: 20px 10px;
+}
+
+.our_team .team_member .member_img {
+  background: #e9e5fa;
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.our_team .team_member h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+  margin-bottom: 7px;
+}
+
+.our_team .team_member span {
+  font-size: 14px;
+}
+
+.our_team .team_member1 {
+  width: 80vw;
+}
+
+.our_team .team_member2 {
+  width: 46vw;
+}
+.our_team .team_member3 {
+  width: 45vw;
+}
+.our_team .team_member4 {
+  width: 46vw;
+}
+.our_team .team_member5 {
+  width: 45vw;
+}
+.our_team .team_member6 {
+  margin-bottom: 5vh;
+}
+
+.our_team .team_member p {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.our_team .team_member .member_img .social_media {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.65);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img .social_media .item {
+  margin: 0 10px;
+}
+
+.our_team .team_member .member_img .social_media .fab {
+  color: #8c7ae6;
+  font-size: 20px;
+}
+
+.our_team .team_member .member_img:hover .social_media {
+  transform: scale(1);
+}
+
+@media screen and (max-width:1024px){
+  .aboutus_component_para{
+    margin: 2rem !important;
+  }
+
+  .aboutus_container-wrapper{
+    width: 170%;
+  }
+
+  .aboutus_heading {
+    padding-bottom: 0;
+  }
+
+  .aboutus_heading > h1{
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .aboutus_para {
+    font-size: 14px;
+  }
+
+  .aboutus_component_para{
+    margin: 1rem !important;
+  }
+
+  .aboutus_container, .aboutus_container:nth-child(2){
+    flex-direction: column;
+  }
+
+  .aboutus_container-wrapper{
+    width: fit-content;
+  }
+
+  .aboutus_heading > h1{
+    font-size: 24px;
+  }
+
+  .aboutus-img{
+    height: 10rem;
+  }
+}

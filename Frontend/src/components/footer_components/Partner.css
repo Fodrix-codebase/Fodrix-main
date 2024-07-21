@@ -1,0 +1,36 @@
+.top_image {
+    display: flex;
+    justify-content: center;
+}
+
+.partner_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form_content_part {
+    width: 35vw;
+}
+
+@media (max-width: 1029px) {
+    .top_image {
+        width: 100%;
+        margin: auto;
+    }
+
+    .partner_form {
+        margin: auto;
+    }
+
+    .form_content_part {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 429px) {
+    .top_img {
+        width: 100%;
+    }
+}

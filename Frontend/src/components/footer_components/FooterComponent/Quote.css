@@ -1,0 +1,143 @@
+.quote_popup__container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quotecontainer {
+  width: 100%;
+  padding: 10px;
+  background: #e7feff;
+}
+
+.quotecontainer h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.inputs form {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #e7feff;
+}
+
+.inputs input {
+  width: 60%;
+  height: 50px;
+  border-radius: 7px;
+  border: 1px solid #000;
+  margin-bottom: 15px;
+  background: transparent;
+  padding: 10px;
+}
+
+.inputs input:focus {
+  outline: none;
+  border: none;
+}
+
+.inputs textarea {
+  width: 60%;
+  height: 150px;
+  border-radius: 7px;
+  border: 1px solid #000;
+  margin-bottom: 15px;
+  background: transparent;
+  padding: 10px;
+}
+
+.inputs textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.inputs button {
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(100, 100, 235);
+  display: block;
+  color: #fff;
+}
+
+.inputs button:focus {
+  border: none;
+  outline: none;
+}
+
+form fieldset {
+  width: 60%;
+  min-height: 250px;
+}
+
+form fieldset label {
+  display: inline-block;
+  width: 30px;
+}
+
+form fieldset input {
+  height: 30px !important;
+}
+
+#field1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#field2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#field3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 750px) {
+  .inputs input {
+    width: 80%;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    background: transparent;
+  }
+
+  .inputs textarea {
+    width: 80%;
+    height: 150px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    background: transparent;
+  }
+
+  form fieldset {
+    width: 80%;
+    min-height: 200px;
+  }
+
+  form fieldset input {
+    margin-left: 5px;
+  }
+
+  form fieldset label {
+    display: inline-block;
+    width: 80px;
+  }
+}

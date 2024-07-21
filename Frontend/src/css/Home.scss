@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+.header_home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2em;
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .content {
+        display: grid;
+        height: 100%;
+    }
+    .description_home {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .heading_home {
+            font-size: 50px;
+            text-align: center;
+            font-family: 'Nunito';
+            color: white;
+        }
+        .form_home {
+            position: relative;
+            i {
+                position: absolute;
+                left: 0.7em;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 20px;
+                color: rgb(170, 170, 170);
+            }
+            input {
+                width: 300px;
+                padding: 0.7em 3em 0.7em;
+                outline: none;
+                border: none;
+                border-radius: 25px;
+                &::placeholder {
+                    font-family: 'Poppins';
+                }
+            }
+        }
+    }
+}
+
+//Button
+#bookshootnow_home {
+    border-radius: 6px;
+    background: #fff;
+    color: steelblue;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    cursor: pointer;
+}
+
+#bookshootnow_home:hover {
+    background: skyblue;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+//Second Div
+.secondDiv_home {
+    margin: 2em auto;
+    padding: 2em 0;
+    width: 80%;
+    // text-align: center;
+    .div2head_home {
+        font-size: 45px;
+        font-weight: 700;
+    }
+    .div2subhead_home {
+        margin: 0 auto;
+        font-size: 21px;
+    }
+}
+
+//underline 
+.underline_home {
+    font-weight: 700;
+    background-image: linear-gradient(transparent 65%, skyblue 0%);
+    background-repeat: no-repeat;
+    background-size: 100% 250%;
+    background-position: 0% 65%;
+    transition: background-position 0.5s ease 0s;
+    &:hover {
+        background-position: 0% 100%;
+    }
+}
+
+//third div about us
+.aboutushead_home {
+    margin: 50px 0;
+}
+
+.aboutus_home {
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    padding: 2em;
+    width: 80%;
+    margin: 0 auto;
+    .imageCartoon_home {
+        width: 100%;
+        // width="420px"
+        // height="240px"
+    }
+    .desc_home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Poppins';
+        h1 {
+            font-size: 40px;
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 18px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+    }
+    .videoanimation_home {
+        justify-content: center;
+        position: relative;
+        .videoBtn_home {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            border: 1px solid steelblue;
+            padding: 0.5em;
+            outline: none;
+            background-color: #fff;
+            i {
+                color: steelblue;
+            }
+        }
+    }
+}
+
+//Categories
+.categories_home {
+    padding: 5em 0;
+    .display_home {
+        padding: 0 15px;
+        hr {
+            margin: 0;
+        }
+    }
+}
+
+.div5_home {
+    padding: 0 0 5rem 0;
+    .div5head_home {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 55px;
+        font-weight: bolder;
+    }
+    .div5subhead_home {
+        font-size: 18px;
+    }
+    .div5-grid_home {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 80%;
+        margin: 2em auto;
+        .gridCard_home {
+            padding: 1em;
+            text-align: center;
+            img {
+                margin-bottom: 2em;
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.div6 {
+    .div6head_home {
+        font-size: 36px;
+        color: white;
+    }
+    .div6Btn {
+        background-color: #fff;
+        outline: none;
+        padding: 0.5em;
+    }
+}
+
+//PhotoStories
+.photoStories_home {
+    .photoStoriesHead_home {
+        font-size: 55px;
+        font-weight: bold;
+    }
+}
+
+.testimonials_home {
+    background-color: pink;
+}
+
+.testimonialsHeading_home {
+    font-size: 40px;
+}
+
+//Booking 
+.booking_home {
+    margin: 5em auto;
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .card_1 {
+        padding: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-weight: 700;
+            font-family: 'Poppins';
+        }
+    }
+    .cards {
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+        img {
+            position: absolute;
+            z-index: 99;
+            right: -4em;
+        }
+        .img1 {
+            transform: rotate(-45deg);
+        }
+        .img2 {
+            transform: rotate(180deg);
+        }
+        h4 {
+            margin-bottom: 1em;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        i {
+            color: #9ECBDD;
+            font-size: 50px;
+            margin-bottom: 1em;
+        }
+        &:nth-of-type(2) {
+            background-color: #F7FBFD;
+        }
+        &:nth-of-type(3) {
+            background-color: #EFF6F8;
+        }
+        &:nth-of-type(4) {
+            background-color: #E7F2F7;
+        }
+    }
+}
+
+.topDestinations_home {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    .head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .explore-destination {
+        padding: 5px 16px;
+        background-color: skyblue;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .grid {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr;
+        .grid-items {
+            padding: 1em;
+            box-shadow: 2px 10px 24px rgba(0, 0, 0, .05);
+            img {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.blogs_home {
+    width: 60%;
+    margin: 5em auto;
+    .grid {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr;
+        .grid-items {
+            position: relative;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            .overlay {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 20px;
+            }
+            .desc {
+                position: relative;
+                z-index: 10;
+                span {
+                    font-weight: 700;
+                }
+                .destination {
+                    text-transform: uppercase;
+                }
+            }
+            padding: 1em;
+        }
+        .one {
+            background: url('https://images.unsplash.com/photo-1601622256416-d7f757f99eb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fG5haW5pdGFsfGVufDB8fHx8MTYyNTY0OTAzMA&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        .two {
+            background: url('https://images.unsplash.com/photo-1561731216-c3a4d99437d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHRpZ2VyfGVufDB8fHx8MTYyNTY0ODgzNw&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        .three {
+            background: url('https://images.unsplash.com/photo-1590765759804-0b2b579820b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fG9vdHl8ZW58MHx8fHwxNjI1NjQ4NTA1&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        .four {
+            background: url('https://images.unsplash.com/photo-1516406742981-2b7d67ec4ae8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fG1hbmFsaXxlbnwwfHx8fDE2MjU2NDgwOTM&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        .five {
+            background: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGJlYWNofGVufDB8fHx8MTYyNTU4MTY1NQ&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        .six {
+            background: url('https://images.unsplash.com/photo-1515861461225-1488dfdaf0a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGF1c3RyYWxpYXxlbnwwfHx8fDE2MjU1ODEzMzI&ixlib=rb-1.2.1&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header_home {
+        .description_home {
+            padding: 0 3rem;
+            .heading_home {
+                font-size: 40px;
+            }
+        }
+    }
+    .secondDiv_home {
+        .div2head_home {
+            font-size: 25px;
+        }
+        .div2subhead_home {
+            font-size: 20px;
+        }
+    }
+    .aboutus_home {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .div5_home {
+        .div5head_home {
+            font-size: 40px;
+        }
+        .div5-grid_home {
+            grid-template-columns: 1fr;
+        }
+    }
+    .booking_home {
+        grid-template-columns: 1fr;
+        .card_1 {
+            padding: 1em;
+            h2 {
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .topDestinations_home {
+        width: 90%;
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .blogs_home {
+        width: 90%;
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

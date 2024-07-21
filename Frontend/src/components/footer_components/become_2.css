@@ -1,0 +1,82 @@
+.looking_container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .left_part {
+  width: 42%;
+} */
+
+.looking_container .content {
+  width: 80%;
+}
+
+.looking_container h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.part1 {
+  margin: 50px 0;
+}
+
+.icon img {
+  width: 11%;
+}
+
+/* .main-container div .img_become {
+  height: 80vh;
+  width: 35%;
+} */
+
+img-become__new .right_part {
+  width: 42%;
+}
+
+.right_part .part2 .content {
+  width: 53%;
+}
+
+@media (max-width: 860px) {
+  .looking_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #d9f4ff; */
+  }
+
+  .looking_container .content p {
+    text-align: center;
+  }
+
+  .looking_container h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .icon img {
+    width: 15%;
+  }
+
+  .looking_container .content {
+    margin: auto;
+    width: 100%;
+  }
+
+  .left_part,
+  .right_part {
+    width: 75%;
+    text-align: center;
+  }
+
+  .right_part .part2 .content {
+    width: 100%;
+  }
+
+  .becomFodrixographer-p__font {
+    font-size: 15px;
+  }
+}

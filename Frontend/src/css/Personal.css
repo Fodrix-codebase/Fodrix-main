@@ -1,0 +1,102 @@
+/* @import url("http://fonts.googleapis.com/css?fam"); */
+
+.image-section_personal {
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 101%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.image-section_personal img {
+  width: 100px;
+  height: auto;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.container_personal {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  border-collapse: collapse;
+  transition: all 0.2s ease-in;
+}
+.container_personal .box_personal {
+  position: relative;
+  width: 1200px;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.box_personal {
+  top: 0px;
+  left: 150px;
+}
+.container1_personal {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  border-collapse: collapse;
+  transition: all 0.2s ease-in;
+}
+.container1_personal .box1_personal {
+  position: relative;
+  width: 250px;
+  padding: 0px;
+  padding-bottom: 0px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.container1_personal:hover {
+  transform: scale(1.01);
+}
+.back_personal {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.back_personal:hover {
+  background-color: rgb(243, 243, 243);
+}
+.gallery_personal {
+  margin: 0px;
+  width: 150px;
+}
+.gallery_personal img {
+  width: 250px;
+  height: auto;
+}
+.head1_personal {
+  font-size: 20px;
+  font-family: freight-display-pro, serif !important ;
+}
+.p1_personal {
+  padding-bottom: -80px;
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: freight-display-pro, serif !important ;
+}
+.p2_personal {
+  font-family: "Manrope", sans-serif !important;
+  color: rgb(75, 74, 74);
+}

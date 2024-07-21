@@ -1,0 +1,116 @@
+/* Base styles */
+
+/* Adjust font size and line height for smaller screens */
+
+  /* Blog card styles */
+  .card-blog {
+    margin-bottom: 20px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    padding: 20px 125px;
+    
+    /* border: 1px solid rgba(0,0,0,.125); */
+    /* border-radius: 0.25rem; */
+  }
+  .card-img-top{
+    height: 500px;
+}
+  
+  /* Blog title styles */
+  .card-title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .author-name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  
+  /* Blog content styles */
+  .card-text {
+    font-size: 18px;
+  }
+  
+  /* Author styles */
+  .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+@media (min-width:768px) {
+    .blog-section{
+        padding: 0 70px;
+    }
+    
+}
+
+  /* Responsive styles */
+  
+  /* Adjust font size and line height for smaller screens */
+  @media (max-width: 768px) {
+   .card-blog{
+    padding: 10px 10px;
+   }
+
+
+   .title-blog{
+    font-size: 26px;
+    font-weight: 600;
+   }
+  }
+  
+  /* Adjust card styles for smaller screens */
+  @media (max-width: 576px) {
+    .card {
+      margin-bottom: 10px;
+    }
+  
+    /* Reduce font size for blog titles and content */
+    .card-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  
+    .author-name {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      
+    .card-text {
+      font-size: 16px;
+    }
+  
+    /* Reduce author image size */
+    .author-image {
+      width: 30px;
+      height: 30px;
+    }
+
+    .card-img-top{
+        height: 300px;
+    }
+  }
+  
+  /* Additional media queries for other screen sizes can be added as needed */
+  

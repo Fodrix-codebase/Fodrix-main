@@ -1,0 +1,25 @@
+#collapse {
+  justify-content: flex-end;
+}
+
+#navbar {
+  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 499;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%);
+  transition: 0.6s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow;
+}
+
+a.nav-item.nav-link {
+  color: #000 !important;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  transition: 0.1s ease-in;
+}
+
+a.nav-item.nav-link:hover {
+  color: #007bff !important;
+}

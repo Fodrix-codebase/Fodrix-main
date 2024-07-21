@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.head_shoot {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.container_shoot {
+    width: 100%;
+    /* height: 89.3vh; */
+    /* display: flex; */
+    /* background-color: rgb(176 223 241 / 86%); */
+}
+
+.container_shoot .shoots {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 80%;
+    height: 9%;
+    margin: auto;
+    margin-top: 7%;
+    background-color: #c8efff;
+    padding: 20px;
+    padding-top: 25px;
+    border-radius: 10px;
+}
+
+.container_shoot .shoot_details .shoot_msg {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container_shoot .shoot_msg h4 {
+    margin-left: -10px;
+}
+
+.container_shoot .shoot_msg i {
+    margin-top: 3px;
+}
+
+.container_shoot .shoot_details .ph_details {
+    margin-top: 9px;
+}
+
+
+/* ==== my photos === */
+
+#gallery {
+    width: 100%;
+    box-shadow: 0 6px 12px -8px rgb(44 44 63 / 12%), 0 9px 24px 0 rgb(44 44 63 / 8%), 0 12px 32px 16px rgb(44 44 63 / 5%);
+}
+
+.main_cont_ph {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.head_ph {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.main_cont_ph .cont_ph {
+    width: 100%;
+    /* margin-top: 10%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_cont_ph .cont_ph .ph_frame {
+    margin-bottom: 3vh;
+}
+
+.main_cont_ph .cont_ph .ph_frame img {
+    width: 115px;
+}
+
+.main_cont_ph .cont_ph .ph_details {
+    padding: 18px 0;
+    border-bottom: 1px solid lightgray;
+    width: 70%;
+}
+
+.main_cont_ph .cont_ph .ph_msg {
+    margin: 10px 0;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.main_cont_ph .cont_ph .ph_msg p {
+    color: #4c4c4c;
+}
+
+.main_cont_ph .cont_ph .ph_button .ph_btn {
+    padding: 12px;
+    width: 100%;
+    background-color: #007bff;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* ======= payment === */
+
+.main_container_pay .container_pay h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.main_container_pay {
+    width: 100%;
+    /* height: 100 vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1%;
+}
+
+.container_pay {
+    width: 100%;
+    /* height: 90vh; */
+    /* display: flex;
+    justify-content: space-between; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2%;
+    justify-content: space-evenly;
+}
+
+.container_pay .left_booking {
+    width: 100%;
+    height: fit-content;
+    box-shadow: 0 6px 12px -8px rgb(44 44 63 / 12%), 0 9px 24px 0 rgb(44 44 63 / 8%), 0 12px 32px 16px rgb(44 44 63 / 5%);
+    padding-bottom: 30px;
+    border-radius: 11px;
+}
+
+.container_pay .left_booking .book_head {
+    display: none;
+    margin: 3%;
+}
+
+.container_pay .left_booking .book_head button {
+    border: none;
+    background-color: transparent;
+    margin-right: 2.5vw;
+    margin-left: 1.1vw;
+    cursor: pointer;
+}
+
+.container_pay .left_booking .book_head button i {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.container_pay .left_booking .book_head h1 {
+    color: #007bff;
+}
+
+.container_pay .left_booking .booking_details {
+    padding: 20px;
+}
+
+.container_pay .left_booking .booking_details .user_details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.container_pay .left_booking .booking_details .user_details .user_name {
+    margin: 6px 2px;
+}
+
+.container_pay .left_booking .booking_details .user_details .user_phone {
+    margin: 6px 2px;
+}
+
+.container_pay .left_booking .booking_details h4 {
+    color: rgba(72, 73, 99, 0.71);
+    margin-bottom: 7px;
+}
+
+.container_pay .left_booking .booking_details h3 {
+    margin-bottom: 10px;
+}
+
+
+/* ===== right side ====== */
+
+.container_pay .right_check {
+    width: 100%;
+    /* height: 110vh; */
+    height: fit-content;
+    box-shadow: 0 6px 12px -8px rgb(44 44 63 / 12%), 0 9px 24px 0 rgb(44 44 63 / 8%), 0 12px 32px 16px rgb(44 44 63 / 5%);
+    padding-bottom: 10px;
+    border-radius: 11px;
+}
+
+#check_text {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    letter-spacing: 5px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.container_pay .right_check .book_head {
+    display: flex;
+    margin: 3%;
+    color: #007bff;
+}
+
+.container_pay .right_check .book_head h1 {
+    margin-right: 5%;
+}
+
+.container_pay .right_check .booking_details {
+    padding: 10px;
+}
+
+.container_pay .right_check .booking_details h4 {
+    font-weight: 600;
+}
+
+.container_pay .right_check .booking_details .order {
+    display: none;
+    justify-content: space-between;
+}
+
+.fade_ch {
+    color: rgba(72, 73, 99, 0.71);
+    font-weight: 200;
+}
+
+.container_pay .right_check .booking_details .order2nd {
+    margin: 11px 0;
+}
+
+.container_pay .right_check .booking_details .order .color {
+    color: green;
+    font-weight: 600;
+}
+
+.booking_details_right {
+    border-bottom: 1px solid lightgrey;
+}
+
+.booking_details_right .order3 {
+    padding-bottom: 20px;
+}
+
+.container_pay .right_check .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.card_container_dash {
+    padding: 20px;
+    display: none;
+}
+
+.card_container_dash input[type="number" i] {
+    width: 94%;
+    margin: auto;
+    /* padding: 11px; */
+    padding: 11px 0px 11px 20px;
+    border: 1.2px solid lightgray;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card_container_dash .card_details2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_container_dash .card_details2 input[type="number" i] {
+    width: 43%;
+    margin: 0;
+}
+
+.card_icon_container {
+    padding: 3px 20px;
+    /* display: flex;
+    justify-content: center; */
+    display: none;
+}
+
+.card_icon_container .card_icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card_icon_container .rupay {
+    width: 116px;
+}
+
+.pay {
+    padding: 10px 20px 2px 20px;
+    /* display: none; */
+}
+
+.pay .checkout_btn {
+    width: 100%;
+    margin: auto;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* 
+@media screen and (max-width: 1200px) {
+    .container_pay .right_check {
+        height: 110vh;
+    }
+} */
+
+@media screen and (max-width: 950px) {
+    /* .container_pay {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_pay .left_booking {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .container_pay .right_check {
+        margin-top: 4vh;
+        width: 100%;
+        margin-left: 0%;
+    } */
+    .pay {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container_pay .left_booking .book_head h1 {
+        font-size: 29px;
+    }
+}
+
+
+/* 
+@media screen and (max-width: 1200px) {
+    /* .main_container_pay {
+        flex-direction: column;
+    }
+    .container_pay {
+        flex-direction: column;
+    }
+    .left_booking {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 7%;
+    }
+    .right_check {
+        width: 40%;
+        margin-left: 35%;
+        margin-bottom: 7%;
+    } */
+
+
+/* } */
+
+@media screen and (max-width: 650px) {
+    .container_shoot .shoots {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,141 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.h1{
+  font-size: 50px;
+}
+body{
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+}
+.signup_form_avaliable{
+	padding: 40px 40px;
+}
+.signup_form_avaliable .font_avaliable{
+	font-size: 18px;
+	color: #130f40;
+	margin: 5px 0;
+}
+.signup_form_avaliable input{
+	margin-top: 5px;
+	width: 365px;
+	font-size: 18px;
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid #000000;
+	text-align: left;
+	padding: 5px 8px;
+	border-radius: 3px;
+}
+
+.signup_form_avaliable button{
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 110%;
+	font-size: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1E90FF;
+	border-radius: 3px;
+    margin-right: 50px;
+	border: 1px solid #1E90FF;
+}
+.signup_form_avaliable button:hover{
+	background: #1E90FF;
+}
+.signup_form_avaliable #email_error{
+	margin-top: 5px;
+	width: 315px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
+
+.wrap {
+    margin: 2% auto;
+         background: rgba(125, 63, 152, 0.52);
+    width: 32%;
+      font-family: monospace;
+    padding: 0 20px;
+}
+
+.sub-main_avaliable{
+      position:relative;
+}
+ 
+.sub-main_avaliable input[type="text"] {
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 0px 18px 1px;
+    color: black;
+    padding: 10px 38px;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    margin-right: 500px;
+    font-family: monospace;
+}
+.sub-main_avaliable input[type="submit"] {
+    color: white;
+    background: #d52685;
+    border: none;
+    padding: 0px 0px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 2px;
+    margin: 17px;
+      font-family: monospace;
+      cursor:pointer;
+      text-transform:uppercase;
+      transition:0.5s all;
+       
+}
+.sub-main_avaliable input[type="submit"]:hover {
+    background: #d9edf7;
+    color: black;
+      transition:0.5s all;
+       
+}
+.container_avaliable{
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    border-collapse: collapse;
+    transition: all .2s ease-in;
+    
+}
+.container_avaliable .box_avaliable{
+  position: relative;
+  width: 1000px;
+  padding: 50px;
+  padding-right: 150px;
+  background: #fff;
+  box-shadow: 0 0px 25px rgba(0 ,0 ,0 , 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.box_avaliable{
+  top:50px;
+  left: -50px;
+}
+.p2_avaliable{
+    font-family: "Manrope", sans-serif !important;
+    color: rgb(75, 74, 74);
+}

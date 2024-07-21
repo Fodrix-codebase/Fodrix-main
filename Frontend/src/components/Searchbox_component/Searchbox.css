@@ -1,0 +1,106 @@
+.search {
+  margin-top: 280px;
+}
+
+.sb-example-1 {
+  max-width: 100%;
+}
+
+input#city_name::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.sb-example-1 .search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-top: 0px;
+  /* margin-left: 9px; */
+  /* margin-right: 619px; */
+}
+
+.sb-example-1 .searchTerm {
+  width: 100%;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  height: 60px;
+  border: rgb(255, 255, 255) solid 1px;
+  border-right: 1px solid black;
+}
+
+.sb-example-1 .searchTerm:focus {
+  color: #3d3c3c;
+}
+
+.sb-example-1 .searchButton {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  text-align: center;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#home_search {
+  display: flex;
+  position: relative;
+  width: 44em;
+  margin: 0 auto;
+  box-shadow: 1px 1px 16px 5px #838080;
+  border-radius: 5px;
+}
+
+#home_search select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default arrow */
+  background: rgb(255, 255, 255); /* Add custom arrow */
+  font-size: 20px;
+  padding-left: 24px;
+}
+
+#home_search select:hover {
+  cursor: pointer;
+}
+
+#home_search select option:nth-of-type(1) {
+  color: grey;
+}
+
+@media (max-width: 900px) {
+  #home_search {
+    width: 30em;
+  }
+}
+/* @media (max-width: 1100px) {
+  #home_search {
+    width: 22vw;
+  }
+} */
+
+@media screen and (max-width: 524px) and (min-width: 320px) {
+  #home_search {
+    width: 17em;
+  }
+  .sb-example-1 .searchButton {
+    width: 50px;
+    height: 46px;
+    border: 1px solid rgb(255, 255, 255);
+    /* background: transparent; */
+    text-align: center;
+    /* color: black; */
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .sb-example-1 .searchTerm {
+    height: 46px;
+    background: transparent;
+  }
+}

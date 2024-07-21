@@ -1,0 +1,49 @@
+{
+    "email": "hello",
+    "status": false,
+    "message": "User found",
+    "user_image": "https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=",
+    "user_name": "Prashant",
+    "pending": [{
+            "package_name": "weeding",
+            "package_price": "5999"
+        },
+        {
+            "package_name": "weeding",
+            "package_price": "4999"
+        }
+    ],
+    "data": [{
+            "id": 216,
+            "c_name": "Sraman Mukherjee",
+            "c_mobile": "6370544993",
+            "c_email": "19281336@kiit.ac.in",
+            "user_services1": null,
+            "user_services2": null,
+            "time": null,
+            "user_address": null,
+            "package_price": 0,
+            "location": "Goa",
+            "date": "02-10-2021",
+            "c_package": "5999",
+            "payment_status": true,
+            "booking_status": true
+        },
+        {
+            "id": 217,
+            "c_name": "Sraman Mukherjee",
+            "c_mobile": "6370544993",
+            "c_email": "19281336@kiit.ac.in",
+            "user_services1": null,
+            "user_services2": null,
+            "time": null,
+            "user_address": null,
+            "package_price": 0,
+            "location": "Delhi",
+            "date": "02-10-2021",
+            "c_package": "5999",
+            "payment_status": true,
+            "booking_status": true
+        }
+    ]
+}

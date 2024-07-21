@@ -1,0 +1,34 @@
+/* admin_view_partners.css */
+
+.partner-list {
+    margin-top: 20px;
+  }
+  
+  .partner-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .partner-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .partner-details {
+    margin-bottom: 5px;
+  }
+  
+  .partner-label {
+    font-weight: bold;
+  }
+  
+  .partner-label::after {
+    content: ":";
+  }
+  
+  .partner-message {
+    margin-top: 5px;
+  }
+  

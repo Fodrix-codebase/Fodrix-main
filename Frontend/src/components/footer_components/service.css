@@ -1,0 +1,191 @@
+:root {
+  --page-title-display: block;
+}
+.heading_service {
+  text-align: center;
+  padding: 0;
+  font-size: 30px;
+}
+.text_services {
+  text-align: center;
+  padding: 0;
+  font-size: 15px;
+}
+.bookbtn_services {
+  font-size: 15px;
+  font-weight: bold;
+  background: #1e90ff;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  float: center;
+  color: #fff;
+  border: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -webkit-transform-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transform-property: box-shadow, transform;
+  -o-transition-property: box-shadow, transform;
+}
+.bookbtn_services:hover,
+.bookbtn_services:focus,
+.bookbtn_services:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.container1_services {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  border-collapse: collapse;
+  transition: all 0.2s ease-in;
+}
+.container1_services .box_services {
+  position: relative;
+  width: 350px;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.box_services {
+  left: 90px;
+}
+.book_services {
+  position: relative;
+  margin-left: 620px;
+}
+.container1_services:hover {
+  transform: scale(1.05);
+}
+.capture_services {
+  text-align: center;
+  padding: 0;
+  font-size: 25px;
+}
+.read_services {
+  font-size: 10px;
+  font-weight: bold;
+  background: #1e90ff;
+  width: 100px;
+  height: 25px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  float: center;
+  color: #fff;
+  border: #fff;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -webkit-transform-duration: 0.3s;
+  transform-duration: 0.3s;
+  -webkit-transform-property: box-shadow, transform;
+  transform-property: box-shadow, transform;
+}
+.read_services:hover,
+.read_services:focus,
+.read_services:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.container2_services {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  transition: all 0.2s ease-in;
+}
+.container2_services .box1_services {
+  position: relative;
+  width: 350px;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.box1_services {
+  left: 90px;
+}
+.read_services {
+  background-image: linear-gradient(to right, rgb(155, 169, 212), #1e90ff);
+}
+.container2_services:hover {
+  transform: scale(1.05);
+}
+.gallery_services {
+  margin: 0px;
+  width: 150px;
+}
+.gallery_services img {
+  width: 250px;
+  height: auto;
+}
+.image_services {
+  background-position: center;
+  background-size: size;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading_service {
+    padding: 4%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+  }
+  .text_services {
+    font-size: 14px;
+  }
+  .bookbtn_services {
+    display: none;
+  }
+  .container1_services .box_services {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .box_services {
+    left: 30px;
+  }
+  .container2_services .box1_services {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .box1_services {
+    left: 30px;
+  }
+}

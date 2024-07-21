@@ -1,0 +1,88 @@
+/* @import url('http://fonts.googleapis.com/css?fam'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: black;
+    justify-content: space-between;
+}
+.box_faq{
+    font-size: 30px;
+    width:66%;
+    margin: 50px auto;
+    text-align: center;
+    text-decoration: none;
+    float: center;
+    box-shadow: 0 5px 15px rgba(0 ,0 ,0 , 0.1);
+  }
+  .box_faq .heading_faq{
+      background: #1E90FF;
+      border-radius: 7px;
+      padding: 10px;
+      color: #ffffff;
+      text-align: center; 
+      font-family: 'Courier New', Courier, monospace; 
+  }
+  .h1_faq{
+    font-size: 5px;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(0 ,0 ,0 , 0.1);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    padding: 0px;
+    min-height: auto;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+.accordion_faq{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.accordion-items_faq{
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header_faq{
+    padding: 0.5rem 3rem 0.5rem 1rem ;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.accordion-item-header_faq::after{
+    content: "\25BA";
+    font-size: 1.05rem;
+    position: absolute;
+    right: 1rem;
+}
+.accordion-item-header_faq.active::after{
+    content: "\25BC";
+    color:#1E90FF ;
+}
+.accordion-item-body_faq{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content_faq{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right,transparent,black,transparent) 1;
+}
+.accordion-item-header_faq.active + .accordion-item-body_faq{
+    max-height: 1000px;
+}

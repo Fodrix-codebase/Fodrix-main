@@ -1,0 +1,44 @@
+.NewDashboard-container {
+  width: 100%;
+  /* min-height: 100vh; */
+  /* max-height: fit-content; */
+  /* overflow-y: hidden; */
+  height: fit-content;
+  display: flex;
+}
+
+.DashboardNav-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0.8em;
+  left: 4em;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 4;
+}
+
+.NewDashboard-hamburger {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #fff;
+}
+@media (min-width: 810px) {
+  .NewDashboard-hamburger {
+    display: none;
+  }
+
+  .DashboardNav-close {
+    display: none;
+  }
+}
+
+@media (max-width: 645px) {
+  .NewDashboard-container {
+    overflow-y: visible;
+    /* height: 190vh; */
+    background-color: #eff3fa;
+  }
+}

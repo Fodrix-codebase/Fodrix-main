@@ -1,0 +1,344 @@
+const express = require('express');
+const router = express.Router();
+const portfolioController = require('../controllers/portfolioController');
+
+// GET image links for a specific category
+router.get('/:category/images', portfolioController.getImageLinks);
+
+// POST image links for a specific category
+router.post('/:category/add', portfolioController.addImageLink);
+
+// DELETE image link for a specific category
+router.delete('/:category/delete', portfolioController.deleteImageLink);
+
+module.exports = router;
+
+
+
+const Portfolio = require('../model/Portfolio');
+
+exports.addImageLink = async (req, res) => {
+  const category = req.params.category;
+  const links = req.body.links;
+
+  if (!Array.isArray(links) || links.length === 0) {
+    return res.status(400).json({ error: 'Image links array is required.' });
+  }
+
+  const successfullyAddedLinks = [];
+  const invalidLinks = [];
+
+  for (const link of links) {
+    if (typeof link === 'string' && link.trim() !== '') {
+      try {
+        const newImage = await Portfolio.create({ category, link });
+        successfullyAddedLinks.push(newImage);
+      } catch (err) {
+        invalidLinks.push(link);
+      }
+    } else {
+      invalidLinks.push(link);
+    }
+  }
+
+  const response = {
+    success: successfullyAddedLinks.length > 0,
+    addedLinks: successfullyAddedLinks,
+    invalidLinks: invalidLinks,
+  };
+
+  return res.status(201).json(response);
+};
+
+exports.getImageLinks = async (req, res) => {
+  const category = req.params.category;
+
+  try {
+    const imageLinks = await Portfolio.find({ category });
+    return res.json(imageLinks);
+  } catch (err) {
+    return res.status(500).json({ error: 'Failed to fetch image links from the database.' });
+  }
+};
+
+exports.deleteImageLink = async (req, res) => {
+  const category = req.params.category;
+  const linkToDelete = req.body.link;
+
+  if (!linkToDelete) {
+    return res.status(400).json({ error: 'Image link to delete is required.' });
+  }
+
+  try {
+    const deleteResult = await Portfolio.deleteOne({ category, link: linkToDelete });
+    if (deleteResult.deletedCount > 0) {
+      return res.status(200).json({ message: 'Image link deleted successfully.' });
+    } else {
+      return res.status(404).json({ error: 'Image link not found in the category.' });
+    }
+  } catch (err) {
+    return res.status(500).json({ error: 'Failed to delete image link from the database.' });
+  }
+};
+
+
+
+
+const mongoose = require('mongoose');
+
+const PortfolioSchema = new mongoose.Schema({
+  category: {
+    type: String,
+    required: true,
+    enum: [
+      'wedding',
+      'business',
+      'baby',
+      'pre-wedding',
+      'maternity',
+      'personal',
+      'family',
+      'travel',
+      'post-wedding',
+      'other',
+    ],
+  },
+  link: {
+    type: String,
+    required: true,
+  },
+});
+
+const Portfolio = mongoose.model('Portfolio', PortfolioSchema);
+
+module.exports = Portfolio;
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import './portfolio.css';
+import CallbackPopup from '../../mainUtils/CallbackPopup';
+import Lightbox from 'react-image-lightbox'; // Import react-image-lightbox
+import 'react-image-lightbox/style.css'; // Import the CSS for react-image-lightbox
+import { css } from '@emotion/react';
+import { RingLoader } from 'react-spinners';
+// import Images from "../../All_Images/Images";
+
+
+
+const loaderCss = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
+export default function Portfolio() {
+  const { category } = useParams();
+  const [imageLinks, setImageLinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  // useEffect(() => {
+  //   fetchImageLinks();
+  // }, [category]);
+
+  // const fetchImageLinks = async () => {
+  //   try {
+  //     const response = await axios.get(`http://localhost:5000/portfolio/${category}/images`);
+  //     const imageLinksArray = response.data.map((imageData) => imageData.link);
+  //     setImageLinks(imageLinksArray);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.error('Error fetching image links:', error);
+  //     setLoading(false);
+  //   }
+  // };
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/portfolio/${category}/images`);
+        const imageLinksArray = response.data.map((imageData) => imageData.link);
+        setImageLinks(imageLinksArray);
+      } catch (error) {
+        console.error('Error fetching image links:', error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false); // Set loading to false after at least 3 seconds
+        }, 3000);
+      }
+    };
+
+    fetchData();
+  }, [category]);
+
+  const openLightbox = (index) => {
+    setLightboxOpen(true);
+    setLightboxIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const disableContextMenu = (e) => {
+    e.preventDefault();
+    const image = e.target;
+    if (image.width > window.innerWidth) {
+      return;
+    }
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+  };
+
+  return (
+    <div>
+      <h2 className='text-center text-capitalize mt-4'>{category} Portfolio</h2>
+    
+      {loading ? (
+        <div className="loader-container">
+          <RingLoader color="#36D7B7" loading={true} size={100} />
+          {/* <img  src={Images.fodrixiconnew} alt="Loading Image" style={{ width: '200px', height: '200px' }} /> */}
+          <p className="loader-text">Fodrix - We capture your memories forever</p>
+        </div>
+      ) : (
+      <div className='newgallery'>
+        {imageLinks.map((link, index) => (
+          <img
+            key={index}
+            src={link}
+            alt={`Image ${index + 1}`}
+            onClick={() => openLightbox(index)}
+            onContextMenu={disableContextMenu} // Disable right-click context menu
+            onDragStart={(e) => e.preventDefault()} // Prevent drag and drop
+          />
+        ))}
+      </div>
+       )}
+
+      {lightboxOpen && (
+  <Lightbox
+    mainSrc={imageLinks[lightboxIndex]}
+    nextSrc={imageLinks[(lightboxIndex + 1) % imageLinks.length]}
+    prevSrc={imageLinks[(lightboxIndex + imageLinks.length - 1) % imageLinks.length]}
+    onCloseRequest={closeLightbox}
+    onMovePrevRequest={() => setLightboxIndex((lightboxIndex + imageLinks.length - 1) % imageLinks.length)}
+    onMoveNextRequest={() => setLightboxIndex((lightboxIndex + 1) % imageLinks.length)}
+    onImageLoadError={() => console.error('Error loading image')}
+    reactModalStyle={{ overlay: { zIndex: 1100 } }} // Ensure the lightbox appears on top of other content
+  />
+)}
+
+
+      <CallbackPopup popup={true} callBackForm={true} />
+    </div>
+  );
+}
+
+
+
+
+import React, { useState } from 'react';
+import axios from 'axios';
+
+export default function AdminAddPortfolioImages() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [imageLinks, setImageLinks] = useState([]);
+  const [newImageLink, setNewImageLink] = useState('');
+  const [error, setError] = useState('');
+
+  const categories = ['wedding', 'business', 'baby', 'pre-wedding', 'maternity', 'personal', 'family', 'post-wedding', 'travel', 'other'];
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const handleNewImageLinkChange = (event) => {
+    setNewImageLink(event.target.value);
+  };
+
+  
+
+  const handleRemoveImage = (index) => {
+    const updatedImageLinks = [...imageLinks];
+    updatedImageLinks.splice(index, 1);
+    setImageLinks(updatedImageLinks);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      if (selectedCategory && imageLinks.length > 0) {
+        await axios.post(`http://localhost:5000/portfolio/${selectedCategory}/add`, { links: imageLinks });
+        alert('Image links added successfully.');
+        setSelectedCategory('');
+        setImageLinks([]);
+        setNewImageLink('');
+      } else {
+        setError('Please select a category and add at least one image link.');
+      }
+    } catch (error) {
+      setError('Error adding image links. Please try again.');
+      console.error('Error adding image links:', error);
+    }
+  };
+
+
+  const handleAddImage = () => {
+    if (newImageLink.trim() !== '') {
+      // Check for duplicates before adding the new link
+      if (!imageLinks.includes(newImageLink.trim())) {
+        setImageLinks([...imageLinks, newImageLink.trim()]);
+        setNewImageLink('');
+        setError('');
+      } else {
+        setError('Image link already exists.');
+      }
+    } else {
+      setError('Please enter a valid image link.');
+    }
+  };
+
+  return (
+    <div className="container my-3" style={{display:"block"}}>
+      <h1 className="text-center mt-4">Add Portfolio Images</h1>
+      {error && <div className="alert alert-danger">{error}</div>}
+      <div className="form-group mt-4">
+        <label htmlFor="category">Select Category:</label>
+        <select className="form-control" id="category" value={selectedCategory} onChange={handleCategoryChange}>
+          <option value="">Select a category</option>
+          {categories.map((category) => (
+            <option key={category} value={category}>{category}</option>
+          ))}
+        </select>
+      </div>
+      <div className="form-group">
+        <label htmlFor="newImageLink">Add Image Link:</label>
+        <div className="input-group mb-3">
+          <input type="text" className="form-control w-100" id="newImageLink" value={newImageLink} onChange={handleNewImageLinkChange} />
+          <div className="input-group-append">
+            <button className="btn btn-primary mt-2" type="button" onClick={handleAddImage}>Add Image</button>
+          </div>
+        </div>
+      </div>
+      {imageLinks.length > 0 && (
+        <div className="form-group">
+          <label>Added Image Links:</label>
+          <ul className="list-group">
+            {imageLinks.map((link, index) => (
+              <li key={index} className="list-group-item">
+                {link}
+                <button type="button" className="btn btn-danger btn-sm ml-2" onClick={() => handleRemoveImage(index)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <button type="button" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+    </div>
+  );
+};
